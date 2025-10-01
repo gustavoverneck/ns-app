@@ -1,6 +1,6 @@
 # particle.py
 
-from constants import *
+from .constants import *
 from enum import Enum
 
 class ParticleType(Enum):
@@ -140,7 +140,7 @@ class ParticlesData:
     def init_electron(self):
         self.e = Particle(
             id="Electron",
-            mass=self.mass_kg_to_natural(ELECTRON_MASS_KG),  # eV
+            mass=ELECTRON_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -154,7 +154,7 @@ class ParticlesData:
     def init_muon(self):
         self.mu = Particle(
             id="Muon",
-            mass=self.mass_kg_to_natural(MUON_MASS_KG),  # eV
+            mass=MUON_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -168,7 +168,7 @@ class ParticlesData:
     def init_tau(self):
         self.tau = Particle(
             id="Tau",
-            mass=self.mass_kg_to_natural(TAU_MASS_KG),  # eV
+            mass=TAU_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -182,7 +182,7 @@ class ParticlesData:
     def init_electron_neutrino(self):
         self.ve = Particle(
             id="Electron Neutrino",
-            mass=self.mass_kg_to_natural(ELECTRON_NEUTRINO_MASS_KG),  # eV
+            mass=ELECTRON_NEUTRINO_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -196,7 +196,7 @@ class ParticlesData:
     def init_muon_neutrino(self):
         self.vmu = Particle(
             id="Muon Neutrino",
-            mass=self.mass_kg_to_natural(MUON_NEUTRINO_MASS_KG),  # eV
+            mass=MUON_NEUTRINO_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -210,7 +210,7 @@ class ParticlesData:
     def init_tau_neutrino(self):
         self.vtau = Particle(
             id="Tau Neutrino",
-            mass=self.mass_kg_to_natural(TAU_NEUTRINO_MASS_KG),  # eV
+            mass=TAU_NEUTRINO_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.LEPTON,
@@ -224,7 +224,7 @@ class ParticlesData:
     def init_proton(self):
         self.p = Particle(
             id="Proton",
-            mass=self.mass_kg_to_natural(PROTON_MASS_KG),  # eV
+            mass=PROTON_MASS_MEV,  # Use MEV constant
             charge=+1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -238,7 +238,7 @@ class ParticlesData:
     def init_neutron(self):
         self.n = Particle(
             id="Neutron", 
-            mass=self.mass_kg_to_natural(NEUTRON_MASS_KG),  # eV
+            mass=NEUTRON_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -252,7 +252,7 @@ class ParticlesData:
     def init_lambda(self):
         self.lambda_baryon = Particle(
             id="Lambda",
-            mass=self.mass_kg_to_natural(LAMBDA_MASS_KG),  # eV
+            mass=LAMBDA_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -266,7 +266,7 @@ class ParticlesData:
     def init_sigma_plus(self):
         self.sigma_plus = Particle(
             id="Sigma+",
-            mass=self.mass_kg_to_natural(SIGMA_PLUS_MASS_KG),  # eV
+            mass=SIGMA_PLUS_MASS_MEV,  # Use MEV constant
             charge=+1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -280,7 +280,7 @@ class ParticlesData:
     def init_sigma_zero(self):
         self.sigma_zero = Particle(
             id="Sigma0",
-            mass=self.mass_kg_to_natural(SIGMA_ZERO_MASS_KG),  # eV
+            mass=SIGMA_ZERO_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -294,7 +294,7 @@ class ParticlesData:
     def init_sigma_minus(self):
         self.sigma_minus = Particle(
             id="Sigma-",
-            mass=self.mass_kg_to_natural(SIGMA_MINUS_MASS_KG),  # eV
+            mass=SIGMA_MINUS_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -308,7 +308,7 @@ class ParticlesData:
     def init_xi_zero(self):
         self.xi_zero = Particle(
             id="Xi0",
-            mass=self.mass_kg_to_natural(XI_ZERO_MASS_KG),  # eV
+            mass=XI_ZERO_MASS_MEV,  # Use MEV constant
             charge=0.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -322,7 +322,7 @@ class ParticlesData:
     def init_xi_minus(self):
         self.xi_minus = Particle(
             id="Xi-",
-            mass=self.mass_kg_to_natural(XI_MINUS_MASS_KG),  # eV
+            mass=XI_MINUS_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=0.5,
             particle_type=ParticleType.BARYON,
@@ -336,7 +336,7 @@ class ParticlesData:
     def init_omega_minus(self):
         self.omega_minus = Particle(
             id="Omega-",
-            mass=self.mass_kg_to_natural(OMEGA_MINUS_MASS_KG),  # eV
+            mass=OMEGA_MINUS_MASS_MEV,  # Use MEV constant
             charge=-1.0,  # in units of e
             spin=1.5,  # Omega- has spin 3/2
             particle_type=ParticleType.BARYON,
@@ -454,7 +454,7 @@ class ParticlesData:
             isospin_z_str = f"{particle.isospin_z}" if particle.isospin_z is not None else "None"
             strangeness_str = f"{particle.strangeness}" if particle.strangeness is not None else "None"
             
-            print(f"{particle.id:15s} {particle.mass/1e6:>10.3f} "
+            print(f"{particle.id:15s} {particle.mass:>10.3f} "
                   f"{particle.charge:>+8.1f}e {particle.spin:>6.1f} "
                   f"{particle.particle_type.value:>12s} {subtype_str:>12s} "
                   f"{particle.generation:>4d} {isospin_str:>6s} {isospin_z_str:>6s} "
