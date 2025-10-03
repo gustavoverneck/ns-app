@@ -4,6 +4,8 @@ Nuclear matter parametrizations for neutron star equation of state models.
 This module contains parametrization data for various nuclear physics models
 including relativistic mean field (RMF), Skyrme-Hartree-Fock, and variational
 Monte Carlo approaches.
+
+All densities are in natural units (fm^-3) and energies in MeV.
 """
 
 from typing import Dict, Any, List
@@ -42,7 +44,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 300.0,    # MeV
         'symmetry_energy': 32.5,       # MeV
         'effective_mass_ratio': 0.70,  # m*/m
-        'saturation_density': 2.36e17, # kg/m³
+        'saturation_density': 0.141,   # fm^-3 (converted from 2.36e17 kg/m³)
         'binding_energy': 16.3,        # MeV
         'surface_tension': 1.1,        # MeV/fm²
         'gamma': 2.37,
@@ -72,7 +74,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 240.0,    # MeV
         'symmetry_energy': 32.5,       # MeV
         'effective_mass_ratio': 0.78,  # m*/m
-        'saturation_density': 2.30e17, # kg/m³
+        'saturation_density': 0.137,   # fm^-3 (converted from 2.30e17 kg/m³)
         'binding_energy': 16.3,        # MeV
         'surface_tension': 1.0,        # MeV/fm²
         'gamma': 2.24,
@@ -101,7 +103,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 271.8,    # MeV
         'symmetry_energy': 37.4,       # MeV
         'effective_mass_ratio': 0.595, # m*/m
-        'saturation_density': 2.27e17, # kg/m³
+        'saturation_density': 0.148,   # fm^-3 (converted from 2.27e17 kg/m³)
         'binding_energy': 16.24,       # MeV
         'gamma': 2.78,
         'K': 1.8e5,
@@ -129,7 +131,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 281.2,    # MeV
         'symmetry_energy': 36.9,       # MeV
         'effective_mass_ratio': 0.634, # m*/m
-        'saturation_density': 2.31e17, # kg/m³
+        'saturation_density': 0.138,   # fm^-3 (converted from 2.31e17 kg/m³)
         'binding_energy': 16.26,       # MeV
         'gamma': 2.72,
         'K': 1.7e5,
@@ -153,7 +155,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 281.5,    # MeV
         'symmetry_energy': 32.0,       # MeV
         'effective_mass_ratio': 0.64,  # m*/m
-        'saturation_density': 2.24e17, # kg/m³
+        'saturation_density': 0.134,   # fm^-3 (converted from 2.24e17 kg/m³)
         'binding_energy': 16.26,       # MeV
         'gamma': 2.73,
         'K': 1.65e5,
@@ -177,7 +179,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 230.0,    # MeV
         'symmetry_energy': 32.6,       # MeV
         'effective_mass_ratio': 0.61,  # m*/m
-        'saturation_density': 2.30e17, # kg/m³
+        'saturation_density': 0.148,   # fm^-3 (converted from 2.30e17 kg/m³)
         'binding_energy': 16.3,        # MeV
         'gamma': 2.15,
         'K': 9.5e4,
@@ -205,7 +207,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 231.0,    # MeV
         'symmetry_energy': 31.3,       # MeV
         'effective_mass_ratio': 0.61,  # m*/m
-        'saturation_density': 2.30e17, # kg/m³
+        'saturation_density': 0.155,   # fm^-3 (converted from 2.30e17 kg/m³)
         'binding_energy': 16.4,        # MeV
         'gamma': 2.18,
         'K': 9.8e4,
@@ -230,7 +232,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 229.9,    # MeV
         'symmetry_energy': 32.0,       # MeV
         'effective_mass_ratio': 0.69,  # m*/m
-        'saturation_density': 2.32e17, # kg/m³
+        'saturation_density': 0.160,   # fm^-3 (converted from 2.32e17 kg/m³)
         'binding_energy': 15.97,       # MeV
         'gamma': 2.05,
         'K': 8.8e4,
@@ -257,7 +259,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 269.0,    # MeV
         'symmetry_energy': 34.5,       # MeV
         'effective_mass_ratio': 0.65,  # m*/m
-        'saturation_density': 2.40e17, # kg/m³
+        'saturation_density': 0.16,    # fm^-3 (standard nuclear saturation)
         'binding_energy': 16.0,        # MeV
         'gamma': 2.8,
         'K': 1.9e5,
@@ -272,7 +274,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 231.0,    # MeV
         'symmetry_energy': 36.8,       # MeV
         'effective_mass_ratio': 0.70,  # m*/m
-        'saturation_density': 2.35e17, # kg/m³
+        'saturation_density': 0.153,   # fm^-3 (nuclear saturation density)
         'binding_energy': 15.85,       # MeV
         'gamma': 2.12,
         'K': 9.2e4,
@@ -287,7 +289,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 200.0,    # MeV
         'symmetry_energy': 30.0,       # MeV
         'effective_mass_ratio': 0.78,  # m*/m
-        'saturation_density': 2.20e17, # kg/m³
+        'saturation_density': 0.153,   # fm^-3 (nuclear saturation density)
         'binding_energy': 16.3,        # MeV
         'gamma': 1.95,
         'K': 7.5e4
@@ -301,7 +303,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 250.0,    # MeV
         'symmetry_energy': 32.0,       # MeV
         'effective_mass_ratio': 0.65,  # m*/m
-        'saturation_density': 2.40e17, # kg/m³
+        'saturation_density': 0.165,   # fm^-3 (converted from 2.40e17 kg/m³)
         'binding_energy': 16.0,        # MeV
         'gamma': 2.3,
         'K': 1.1e5,
@@ -316,7 +318,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 235.0,    # MeV
         'symmetry_energy': 32.7,       # MeV
         'effective_mass_ratio': 0.67,  # m*/m
-        'saturation_density': 2.30e17, # kg/m³
+        'saturation_density': 0.153,   # fm^-3 (nuclear saturation density)
         'binding_energy': 16.0,        # MeV
         'gamma': 2.25,
         'K': 1.0e5
@@ -330,7 +332,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 241.3,    # MeV
         'symmetry_energy': 30.0,       # MeV
         'effective_mass_ratio': 0.70,  # m*/m
-        'saturation_density': 2.32e17, # kg/m³
+        'saturation_density': 0.160,   # fm^-3 (converted from 2.32e17 kg/m³)
         'binding_energy': 16.05,       # MeV
         'gamma': 2.28,
         'K': 1.05e5
@@ -344,7 +346,7 @@ PARAMETRIZATIONS = {
         'incompressibility': 220.4,    # MeV
         'symmetry_energy': 30.0,       # MeV
         'effective_mass_ratio': 0.69,  # m*/m
-        'saturation_density': 2.34e17, # kg/m³
+        'saturation_density': 0.153,   # fm^-3 (nuclear saturation density)
         'binding_energy': 16.05,       # MeV
         'gamma': 2.15,
         'K': 9.8e4
@@ -452,6 +454,8 @@ if __name__ == "__main__":
     # Demonstration of parametrizations
     print("Nuclear Matter Parametrizations Database")
     print("=" * 50)
+    print("Note: All densities in fm^-3, energies in MeV")
+    print()
     
     # Show all available parametrizations
     print("Available parametrizations:")
@@ -472,13 +476,14 @@ if __name__ == "__main__":
     comparison = compare_parametrizations(comparison_params)
     
     # Print comparison table
-    headers = ['Name', 'K₀ (MeV)', 'S₀ (MeV)', 'm*/m', 'γ']
-    print(f"{headers[0]:<10} {headers[1]:<10} {headers[2]:<10} {headers[3]:<8} {headers[4]:<6}")
-    print("-" * 50)
+    headers = ['Name', 'K₀ (MeV)', 'S₀ (MeV)', 'm*/m', 'ρ₀ (fm⁻³)', 'γ']
+    print(f"{headers[0]:<10} {headers[1]:<10} {headers[2]:<10} {headers[3]:<8} {headers[4]:<12} {headers[5]:<6}")
+    print("-" * 65)
     
     for name, data in comparison.items():
         k0 = data.get('incompressibility', 'N/A')
         s0 = data.get('symmetry_energy', 'N/A')
         eff_mass = data.get('effective_mass_ratio', 'N/A')
+        rho0 = data.get('saturation_density', 'N/A')
         gamma = data.get('gamma', 'N/A')
-        print(f"{name:<10} {k0:<10} {s0:<10} {eff_mass:<8} {gamma:<6}")
+        print(f"{name:<10} {k0:<10} {s0:<10} {eff_mass:<8} {rho0:<12.3f} {gamma:<6}")

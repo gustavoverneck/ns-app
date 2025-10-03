@@ -139,7 +139,7 @@ class AtomicStarEOS(BaseEOS):
         # Fermi momenta and masses arrays (all normalized)
         kf = [kf_n, kf_p, kf_e]
         m = [mn, mp, me]
-        
+                
         # Calculate pressure in normalized units
         pres = 0.0
         for i in range(3):  # neutron, proton, electron
