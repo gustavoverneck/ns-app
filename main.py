@@ -5,6 +5,7 @@ from ns.models import EOSType
 from ns.parametrizations import ParametrizationType
 from ns.tov_solver import TOVSolver
 import argparse
+from scipy.optimize import broyden1
 
 def test_atomic_eos():
     """Test the atomic neutron star EOS."""
@@ -17,6 +18,7 @@ def test_atomic_eos():
     atomic_eos = EOSSolver.create_eos(
         eos_type=EOSType.ATOMIC_STAR,
         parametrization=ParametrizationType.GM1,
+        root_finder=broyden1,
         verbose=True
     )
     
